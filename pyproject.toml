@@ -1,0 +1,89 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdfpeek"
+version = "0.1.0"
+description = "PDF to text extraction with confidence scoring — born-digital, scanned, and hybrid PDFs"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["pdf", "text-extraction", "ocr", "nlp", "document"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pypdfium2>=4.0",
+    "pymupdf>=1.23",
+    "pdfplumber>=0.10",
+    "click>=8.0",
+    "pillow>=10.0",
+    "numpy>=1.24",
+    "colorama>=0.4",
+]
+
+[project.optional-dependencies]
+# ~100 MB — adds Tesseract OCR support for scanned PDFs
+ocr = [
+    "pytesseract>=0.3",
+]
+# ~5 GB — adds surya AI layout model for precise block detection
+layout = [
+    "surya-ocr>=0.4",
+]
+# Full OCR stack: Tesseract + OpenCV for best preprocessing quality
+ocr-full = [
+    "pytesseract>=0.3",
+    "opencv-python-headless>=4.8",
+]
+# Everything
+full = [
+    "pytesseract>=0.3",
+    "surya-ocr>=0.4",
+    "opencv-python-headless>=4.8",
+]
+# For contributors
+dev = [
+    "pytest>=8.0",
+    "reportlab>=4.0",
+    "pytesseract>=0.3",
+    "pikepdf>=8.0",
+]
+
+[project.scripts]
+pdfpeek = "pdf_engine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ibrah5em/pdfpeek"  # TODO: replace with your username
+"Bug Tracker" = "https://github.com/ibrah5em/pdfpeek/issues"
+Documentation = "https://github.com/ibrah5em/pdfpeek#readme"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pdf_engine"]
+
+# PKG-5: include test fixtures in the sdist so downstream users can run the
+# test-suite after installing from source.
+[tool.hatch.build.targets.sdist]
+include = [
+    "pdf_engine/",
+    "tests/",
+    "tests/fixtures/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: end-to-end tests requiring real PDFs and external tools",
+]

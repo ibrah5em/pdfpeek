@@ -3,8 +3,8 @@
 **PDF to text — with a confidence score.**
 
 [![Tests](https://github.com/ibrah5em/pdfpeek/actions/workflows/test.yml/badge.svg)](https://github.com/ibrah5em/pdfpeek/actions)
-[![PyPI](https://img.shields.io/pypi/v/pdfpeek)](https://pypi.org/project/pdfpeek/)
-[![Python](https://img.shields.io/pypi/pyversions/pdfpeek)](https://pypi.org/project/pdfpeek/)
+[![PyPI](https://img.shields.io/pypi/v/pdfpeek?color=purple)](https://pypi.org/project/pdfpeek/)
+[![Python](https://img.shields.io/pypi/pyversions/pdfpeek?color=purple)](https://pypi.org/project/pdfpeek/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Most PDF tools dump text and leave you guessing whether it worked.

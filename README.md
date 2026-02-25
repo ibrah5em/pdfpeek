@@ -2,7 +2,6 @@
 
 **PDF to text — with a confidence score.**
 
-[![Tests](https://img.shields.io/github/actions/workflow/status/ibrah5em/pdfpeek/test.yml?style=flat-square&color=blue&label=tests)](https://github.com/ibrah5em/pdfpeek/actions)
 [![PyPI](https://img.shields.io/pypi/v/pdfpeek?style=flat-square&color=blue)](https://pypi.org/project/pdfpeek/)
 [![Python](https://img.shields.io/pypi/pyversions/pdfpeek?style=flat-square&color=blue)](https://pypi.org/project/pdfpeek/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)

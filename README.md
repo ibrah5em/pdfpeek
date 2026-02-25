@@ -9,7 +9,7 @@
 Most PDF tools dump text and leave you guessing whether it worked.
 **pdfpeek** runs a 10-stage pipeline and tells you exactly how confident it is in every extraction.
 
-![output](https://github.com/user-attachments/assets/ca018340-99b5-415f-ae3c-23cbc6972533)
+![input](https://github.com/user-attachments/assets/0e592a62-90b1-42d7-90d6-c93b8f80722f)
 
 
 ## Install

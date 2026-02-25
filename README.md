@@ -9,22 +9,8 @@
 Most PDF tools dump text and leave you guessing whether it worked.
 **pdfpeek** runs a 10-stage pipeline and tells you exactly how confident it is in every extraction.
 
-```
-$ pdfpeek extract report.pdf
+![output](https://github.com/user-attachments/assets/ca018340-99b5-415f-ae3c-23cbc6972533)
 
-  pdfpeek  →  report.pdf
-
-  ✔  Triage                2 page(s)  text_native: 1  hybrid: 1
-  ✔  Extraction            47 blocks
-  ✔  Warnings              1 warning(s)
-
-  Confidence   0.893
-  Time         1.4s
-
-  Output  →  report.txt
-```
-
----
 
 ## Install
 
@@ -39,10 +25,7 @@ pip install pdfpeek[ocr]
 pip install pdfpeek[layout]
 ```
 
-> **Tesseract** (system package) is required for `[ocr]`:
-> - macOS: `brew install tesseract`
-> - Ubuntu/Debian: `sudo apt install tesseract-ocr`
-> - Windows: [UB-Mannheim installer](https://github.com/UB-Mannheim/tesseract/wiki)
+if you want to use `[ocr]` make sure you have tesseract-ocr
 
 ---
 

@@ -1,5 +1,12 @@
 # pdfpeek
 
+> [!WARNING]
+> **Unmaintained, archived.** Don't use this for anything real. Right-to-left text (Arabic)
+> comes out with its characters reversed but still gets a high confidence score, and on
+> normal born-digital PDFs the output is about what a plain `pymupdf` `get_text()` call gives you.
+> Use [pymupdf4llm](https://github.com/pymupdf/pymupdf4llm) for fast text/markdown, or
+> [docling](https://github.com/docling-project/docling) for layout, tables and OCR.
+
 **PDF to text — with a confidence score.**
 
 [![PyPI](https://img.shields.io/pypi/v/pdfpeek?style=flat-square&color=blue)](https://pypi.org/project/pdfpeek/)
